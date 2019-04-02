@@ -39,12 +39,14 @@ body {
       display: flex;
       flex-flow: row;
       justify-content: center;
+      text-transform: uppercase;
       text-align: center; }
     .header .box .profession {
       font-size: 30px;
       display: flex;
       flex-flow: row;
       justify-content: center;
+      text-transform: uppercase;
       text-align: center; }
 
 .columns {
@@ -65,7 +67,9 @@ body {
     text-decoration: underline;
     display: block; }
   .column-section .title {
-    font-size: 25px; }
+    letter-spacing: 5px;
+    font-size: 25px;
+    text-transform: uppercase; }
     .column-section .title::after {
       content: '';
       margin-top: 2px;

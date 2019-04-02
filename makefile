@@ -1,15 +1,11 @@
-.PHONY: all
-all:
-	echo "There is no default command"
+.PHONY: compose
+compose: css
+	python compose.py
 
 .PHONY: css
 css:
-	npx node-sass index.scss index.css
+	npx node-sass index.scss build/index.css
 
 .PHONY: pfreeze
 pfreeze:
 	pip freeze -l > requirements.txt
-
-.PHONY: compose
-compose: css
-	python compose.py

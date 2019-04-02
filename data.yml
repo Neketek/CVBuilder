@@ -1,0 +1,31 @@
+cv:
+  name:
+    first: Nikita
+    last: Balakin
+  profession: Web Developer
+  profile: >
+    I'm just a regular everyday normal guy.
+    So what now?
+  info:
+    - label: Address
+      value: Kyiv, Ukraine
+    - label: Date/Place of birth
+      value: 1994-12-29/Ukraine
+    - label: Nationality
+      value: Ukrainian
+  links:
+    - label: Telegram
+      value: ""
+    - label: Github
+      value: ""
+    - label: Linkedin
+      value: ""
+    - label: Skype
+      value: ""
+  skills:
+    - label: Python
+      value: 5
+    - label: HTML/CSS
+      value: 5
+    - label: Javascript
+      value: 5

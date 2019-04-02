@@ -53,6 +53,7 @@ body {
       display: flex;
       flex-flow: row;
       justify-content: center;
+      text-transform: uppercase;
       text-align: center;
     }
     .profession{
@@ -60,6 +61,7 @@ body {
       display: flex;
       flex-flow: row;
       justify-content: center;
+      text-transform: uppercase;
       text-align: center;
     }
   }
@@ -85,7 +87,9 @@ body {
     display: block;
   }
   .title {
+    letter-spacing:5px;
     font-size: 25px;
+    text-transform: uppercase;
     &::after{
       content: '';
       margin-top: 2px;
