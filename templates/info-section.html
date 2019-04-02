@@ -1,0 +1,9 @@
+<div class="column-section">
+  <div class="title"> INFO </div>
+  {% for item in info %}
+    <div class="value">
+      <label>{{item.label}}</label>
+      {{item.value}}
+    </div>
+  {% endfor %}
+</div>

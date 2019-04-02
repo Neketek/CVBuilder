@@ -1,0 +1,25 @@
+<html lang="en">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <meta charset="utf-8">
+    <title>CV</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="box">
+        <div class="name">{{name.first}} {{name.last}}</div>
+        <div class="profession">{{profession}}</div>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column-left">
+        {% include 'info-section.html' %}
+        {% include 'links-section.html' %}
+        {% include 'skills-section.html' %}
+      </div>
+      <div class="column-right">
+      </div>
+    </div>
+  </body>
+</html>
