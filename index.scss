@@ -1,15 +1,38 @@
 $backgroundColor: #546E7A;
 $backgroundColorSecondary: #EEEEEE;
-$primaryFontFamily: 'Lato', sans-serif;
+$primaryFontFamily: 'Roboto', sans-serif;
 $leftColumnSize: 35%;
 $leftColumnColor: #E0E0E0;
 $rightColumnColor: #FAFAFA;
+
+@font-face{
+  font-family: 'Roboto';
+  src: url(../fonts/Roboto-Regular.ttf) format('truetype');
+  font-weight: normal;
+}
+
+@font-face{
+  font-family: 'Roboto';
+  src: url(../fonts/Roboto-Bold.ttf) format('truetype');
+  font-weight: bold;
+}
 
 
 @media print {
   * {
     -webkit-transition: none !important;
     transition: none !important;
+  }
+  .job {
+    &-description{
+      page-break-before: auto;
+    }
+    .team{
+      page-break-inside: avoid;
+    }
+    .achievements{
+      page-break-inside: avoid;
+    }
   }
 
   @page {
@@ -32,6 +55,10 @@ body {
   border-width: 5px;
   border-style: solid;
   box-sizing: border-box;
+}
+
+.profile{
+  margin-top: 10px;
 }
 
 .header {
@@ -67,6 +94,109 @@ body {
   }
 }
 
+
+.job{
+  .job-title{
+    font-size: 20px;
+  }
+  .header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  .description{
+    font-size: 16px;
+  }
+  .type{
+    font-size: 14px;
+  }
+  .date{
+    font-size: 18px;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 10px;
+    .start{
+      margin-right: 4px;
+    }
+    .end{
+      margin-left: 4px;
+    }
+  }
+  .achievements{
+    margin-top: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    &-header{
+      font-size: 15px;
+      font-weight: bold;
+    }
+    &-container{
+      padding-top: 5px;
+      padding-left: 5px;
+    }
+    &-item{
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: baseline;
+      &-dot{
+        flex-shrink: 0;
+        display: inline-block;
+        margin-top: 2px;
+        padding: 2px;
+        margin-right: 5px;
+        width: 5px;
+        height: 5px;
+        border-style: solid;
+        border-radius: 50%;
+        border-width: 2px;
+      }
+    }
+  }
+
+  .team{
+    margin-top: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    &-header{
+      font-size: 15px;
+      font-weight: bold;
+    }
+    &-container{
+      padding-top: 5px;
+      padding-left: 5px;
+    }
+    &-item{
+      margin-bottom: 3px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: baseline;
+    }
+    &-profession{
+      font-size: 18px;
+    }
+    &-number{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      font-weight: bold;
+      font-size: 15px;
+      border-style: solid;
+      border-width: 2px;
+      padding: 2px;
+      margin-right: 5px;
+    }
+  }
+
+
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+
 .columns {
   display: flex;
   flex-grow: 1;
@@ -74,6 +204,10 @@ body {
   flex-wrap: nowrap;
   font-size: 20px;
   background: transparent;
+}
+
+.bold-text{
+  font-weight: bold;
 }
 
 .column-section {
@@ -87,6 +221,7 @@ body {
     display: block;
   }
   .title {
+    font-weight: bold;
     letter-spacing:5px;
     font-size: 25px;
     text-transform: uppercase;
@@ -141,6 +276,7 @@ body {
   box-sizing: border-box;
   width: $leftColumnSize;
   background: $leftColumnColor;
+  flex-shrink: 0;
 }
 
 .column-right{

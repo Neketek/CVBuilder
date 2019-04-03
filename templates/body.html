@@ -1,6 +1,5 @@
 <html lang="en">
   <head>
-    <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <meta charset="utf-8">
     <title>CV</title>
@@ -26,5 +25,19 @@
         {% include 'projects-section.html' %}
       </div>
     </div>
+    <script type="text/javascript">
+      var CM_PIXELS = 37.7952755906;
+      function varstr(name,value){
+        return name.toUpperCase()+"="+value+"cm\n";
+      }
+      function showBodySize(){
+        var body = document.querySelector("body").getBoundingClientRect();
+        var width = Math.ceil(body.width/CM_PIXELS);
+        var height = Math.ceil(body.height/CM_PIXELS);
+        var content = varstr("width", width) + varstr("height", height);
+        console.log(content);
+      }
+      showBodySize();
+    </script>
   </body>
 </html>

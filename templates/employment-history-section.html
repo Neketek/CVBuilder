@@ -1,3 +1,57 @@
 <div class="column-section">
   <div class="title"> EMPLOYMENT HISTORY </div>
+  {% for job in jobs %}
+    <div class="job">
+      <div class="header">
+        <div class="job-title bold-text">
+          {{job.title}}
+        </div>
+        <div class="type bold-text">
+          {{job.type}}
+        </div>
+      </div>
+      <div class="date bold-text">
+        <div class="start">
+          {{job.date.start.month}} {{job.date.start.year}}
+        </div>
+        -
+        <div class="end">
+          {{job.date.end.month}} {{job.date.end.year}}
+        </div>
+      </div>
+      <div class="description">
+        {{job.description}}
+      </div>
+      {% if job.achievements %}
+        <div class="achievements">
+          <div class="achievements-header">
+            Achievements:
+          </div>
+          <div class="achievements-container">
+            {% for item in job.achievements %}
+              <div class="achievements-item">
+                <div class="achievements-item-dot"></div>
+                {{item}}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+      {% if job.team %}
+        <div class="team">
+          <div class="team-header">
+            Team:
+          </div>
+          <div class="team-container">
+            {% for member in job.team %}
+              <div class="team-item">
+                <div class="team-number">{{member.number}}</div>
+                <div class="team-profession">{{member.profession}}</div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  {% endfor %}
 </div>

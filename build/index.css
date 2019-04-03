@@ -1,7 +1,23 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url(../fonts/Roboto-Regular.ttf) format("truetype");
+  font-weight: normal; }
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(../fonts/Roboto-Bold.ttf) format("truetype");
+  font-weight: bold; }
+
 @media print {
   * {
     -webkit-transition: none !important;
     transition: none !important; }
+  .job-description {
+    page-break-before: auto; }
+  .job .team {
+    page-break-inside: avoid; }
+  .job .achievements {
+    page-break-inside: avoid; }
   @page {
     size: auto; } }
 
@@ -14,11 +30,14 @@ body {
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
   background: -webkit-linear-gradient(left, #E0E0E0, #E0E0E0 35%, #FAFAFA 35%, #FAFAFA);
   border-width: 5px;
   border-style: solid;
   box-sizing: border-box; }
+
+.profile {
+  margin-top: 10px; }
 
 .header {
   margin-top: 10px;
@@ -49,6 +68,85 @@ body {
       text-transform: uppercase;
       text-align: center; }
 
+.job {
+  margin-top: 25px;
+  margin-bottom: 25px; }
+  .job .job-title {
+    font-size: 20px; }
+  .job .header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between; }
+  .job .description {
+    font-size: 16px; }
+  .job .type {
+    font-size: 14px; }
+  .job .date {
+    font-size: 18px;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 10px; }
+    .job .date .start {
+      margin-right: 4px; }
+    .job .date .end {
+      margin-left: 4px; }
+  .job .achievements {
+    margin-top: 10px;
+    display: flex;
+    flex-flow: column nowrap; }
+    .job .achievements-header {
+      font-size: 15px;
+      font-weight: bold; }
+    .job .achievements-container {
+      padding-top: 5px;
+      padding-left: 5px; }
+    .job .achievements-item {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: baseline; }
+      .job .achievements-item-dot {
+        flex-shrink: 0;
+        display: inline-block;
+        margin-top: 2px;
+        padding: 2px;
+        margin-right: 5px;
+        width: 5px;
+        height: 5px;
+        border-style: solid;
+        border-radius: 50%;
+        border-width: 2px; }
+  .job .team {
+    margin-top: 10px;
+    display: flex;
+    flex-flow: column nowrap; }
+    .job .team-header {
+      font-size: 15px;
+      font-weight: bold; }
+    .job .team-container {
+      padding-top: 5px;
+      padding-left: 5px; }
+    .job .team-item {
+      margin-bottom: 3px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: baseline; }
+    .job .team-profession {
+      font-size: 18px; }
+    .job .team-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      font-weight: bold;
+      font-size: 15px;
+      border-style: solid;
+      border-width: 2px;
+      padding: 2px;
+      margin-right: 5px; }
+
 .columns {
   display: flex;
   flex-grow: 1;
@@ -56,6 +154,9 @@ body {
   flex-wrap: nowrap;
   font-size: 20px;
   background: transparent; }
+
+.bold-text {
+  font-weight: bold; }
 
 .column-section {
   margin-top: 10px; }
@@ -67,6 +168,7 @@ body {
     text-decoration: underline;
     display: block; }
   .column-section .title {
+    font-weight: bold;
     letter-spacing: 5px;
     font-size: 25px;
     text-transform: uppercase; }
@@ -111,7 +213,8 @@ body {
   padding: 0 10px 0 10px;
   box-sizing: border-box;
   width: 35%;
-  background: #E0E0E0; }
+  background: #E0E0E0;
+  flex-shrink: 0; }
 
 .column-right {
   flex-grow: 1;
