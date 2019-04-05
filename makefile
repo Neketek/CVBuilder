@@ -5,6 +5,7 @@ compose: css
 .PHONY: css
 css:
 	npx node-sass index.scss build/index.css
+	npx postcss build/index.css -u autoprefixer -r
 
 .PHONY: pfreeze
 pfreeze:

@@ -157,9 +157,76 @@ cv:
     - label: Skype
       value: ""
   skills:
+    - label: Back End Web Development
+      value: 7
+    - label: Front End Web Developmen
+      value: 5
+    - label: Game Development
+      value: 2
+    - label: C#
+      value: 5
+    -
+    - label: Algorithms
+      value: 5
     - label: Python
-      value: 5
+      value: 6
     - label: HTML/CSS
-      value: 5
+      value: 6
     - label: Javascript
+      value: 6
+    - label: Webpack
+      value: 4
+    - label: React
       value: 5
+    - label: Redux
+      value: 5
+    - label: Styled Components
+      value: 5
+    - label: Flask
+      value: 6
+    - label: Docker
+      value: 4
+    - label: DockerCompose
+      value: 4
+    - label: Vagrant
+      value: 4
+    - label: nginx
+      value: 2
+    - label: SQLALchemy
+      value: 6
+    - label: MySQL
+      value: 6
+    - label: PostgreSQL
+      value: 4
+    - label: Mailchimp
+      value: 3
+    - label: Twilio
+      value: 3
+    - label: Mixpanel
+      value: 3
+    - label: Firebase
+      value: 2
+    - label: Mongodb
+      value: 2
+    - label: Elasticsearch
+      value: 1
+  education:
+    - university: National University of Kyiv-Mohyla Academy
+      degree: bachelor
+      date:
+        start:
+          year: 2012
+        end:
+          year: 2016
+      note: >
+        Diploma: B16 №052528
+
+    - university: National University of Kyiv-Mohyla Academy
+      degree: master
+      date:
+        start:
+          year: 2016
+        end:
+          year: 2017
+      note: >
+        Not completed. Quit because of personal reasons.

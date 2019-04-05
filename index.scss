@@ -5,6 +5,7 @@ $leftColumnSize: 35%;
 $leftColumnColor: #E0E0E0;
 $rightColumnColor: #FAFAFA;
 
+
 @font-face{
   font-family: 'Roboto';
   src: url(../fonts/Roboto-Regular.ttf) format('truetype');
@@ -18,28 +19,6 @@ $rightColumnColor: #FAFAFA;
 }
 
 
-@media print {
-  * {
-    -webkit-transition: none !important;
-    transition: none !important;
-  }
-  .job {
-    &-description{
-      page-break-before: auto;
-    }
-    .team{
-      page-break-inside: avoid;
-    }
-    .achievements{
-      page-break-inside: avoid;
-    }
-  }
-
-  @page {
-    size: auto;
-  }
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -51,7 +30,7 @@ body {
   flex-wrap: nowrap;
   justify-content: flex-start;
   font-family: $primaryFontFamily;
-  background: -webkit-linear-gradient(left, $leftColumnColor, $leftColumnColor $leftColumnSize, $rightColumnColor $leftColumnSize, $rightColumnColor);
+  background: linear-gradient(left, $leftColumnColor, $leftColumnColor $leftColumnSize, $rightColumnColor $leftColumnSize, $rightColumnColor);
   border-width: 5px;
   border-style: solid;
   box-sizing: border-box;
