@@ -1,3 +1,27 @@
 <div class="column-section">
-  <div class="title"> COURSES </div>
+  <div class="column-section-title"> COURSES </div>
+  {% for item in courses %}
+    <div class="course">
+      <div class="course-header text-bold">
+        <div class="course-header-title">
+          {{item.title}}
+        </div>
+        <div class="course-header-source">
+          {{item.source}}
+        </div>
+      </div>
+      <div class="course-date text-bold">
+        <div class="course-date-start">
+          {{item.date.start.month}} {{item.date.start.year}}
+        </div>
+        -
+        <div class="course-date-end">
+          {{item.date.end.month}} {{item.date.end.year}}
+        </div>
+      </div>
+      <div class="course-note">
+        {{item.note}}
+      </div>
+    </div>
+  {% endfor %}
 </div>

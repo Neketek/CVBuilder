@@ -1,4 +1,5 @@
 cv:
+  photo: true
   name:
     first: Nikita
     last: Balakin
@@ -8,6 +9,13 @@ cv:
     learner. Prefer to work with servers and databases, but have no problems in other
     fields except highly scientific. Prefer difficult startups over routine corporate
     projects.
+  languages:
+    - label: English
+      value: Good Command
+    - label: Ukrainian
+      value: Native
+    - label: Russian
+      value: Native
   jobs:
     - title: Front End Developer
       type: Personal|Open Source
@@ -157,62 +165,80 @@ cv:
     - label: Skype
       value: ""
   skills:
-    - label: Back End Web Development
-      value: 7
-    - label: Front End Web Developmen
-      value: 5
-    - label: Game Development
-      value: 2
-    - label: C#
-      value: 5
-    -
-    - label: Algorithms
-      value: 5
-    - label: Python
-      value: 6
-    - label: HTML/CSS
-      value: 6
-    - label: Javascript
-      value: 6
-    - label: Webpack
-      value: 4
-    - label: React
-      value: 5
-    - label: Redux
-      value: 5
-    - label: Styled Components
-      value: 5
-    - label: Flask
-      value: 6
-    - label: Docker
-      value: 4
-    - label: DockerCompose
-      value: 4
-    - label: Vagrant
-      value: 4
-    - label: nginx
-      value: 2
-    - label: SQLALchemy
-      value: 6
-    - label: MySQL
-      value: 6
-    - label: PostgreSQL
-      value: 4
-    - label: Mailchimp
-      value: 3
-    - label: Twilio
-      value: 3
-    - label: Mixpanel
-      value: 3
-    - label: Firebase
-      value: 2
-    - label: Mongodb
-      value: 2
-    - label: Elasticsearch
-      value: 1
+    general:
+      - label: Back End Web Development
+        value: 7
+      - label: Front End Web Developmen
+        value: 5
+      - label: Algorithms
+        value: 5
+      - label: Software Engineering
+        value: 5
+      - label: DevOps
+        value: 3
+      - label: Game Development
+        value: 2
+      - label: Team Leader
+        value: 3
+      - label: Project Manager
+        value: 3
+      - label: UX Design
+        value: 2
+      - label: Game Design
+        value: 2
+    technical:
+      - label: Unity 3D
+        value: 3
+      - label: C#
+        value: 5
+      - label: Java
+        value: 3
+      - label: Python
+        value: 6
+      - label: HTML/CSS
+        value: 6
+      - label: Javascript
+        value: 6
+      - label: Webpack
+        value: 4
+      - label: React
+        value: 5
+      - label: Redux
+        value: 5
+      - label: Styled Components
+        value: 5
+      - label: Flask
+        value: 6
+      - label: Docker
+        value: 4
+      - label: DockerCompose
+        value: 4
+      - label: Vagrant
+        value: 4
+      - label: nginx
+        value: 2
+      - label: SQLALchemy
+        value: 6
+      - label: MySQL
+        value: 6
+      - label: PostgreSQL
+        value: 4
+      - label: Mailchimp
+        value: 3
+      - label: Twilio
+        value: 3
+      - label: Mixpanel
+        value: 3
+      - label: Firebase
+        value: 2
+      - label: Mongodb
+        value: 2
+      - label: Elasticsearch
+        value: 1
   education:
+
     - university: National University of Kyiv-Mohyla Academy
-      degree: bachelor
+      degree: Bachelor
       date:
         start:
           year: 2012
@@ -222,7 +248,7 @@ cv:
         Diploma: B16 №052528
 
     - university: National University of Kyiv-Mohyla Academy
-      degree: master
+      degree: Master
       date:
         start:
           year: 2016
@@ -230,3 +256,88 @@ cv:
           year: 2017
       note: >
         Not completed. Quit because of personal reasons.
+
+  courses:
+    - source: Coursera
+      title: Machine Learning by Standford University
+      note: >
+        This was a part of my university study
+      date:
+        start:
+          year: 2015
+          month: Aug
+        end:
+          year: 2015
+          month: Sep
+
+  projects:
+
+
+    - title: React Generic Form
+      link: none
+      type: NPM package
+      description: >
+        Nothing to say yet
+      date:
+        start:
+          year: 2015
+          month: Aug
+        end:
+          year: 2015
+          month: Sep
+
+
+    - title: Parrotbot
+      link: none
+      type: Slack Chat Bot
+      description: >
+        Nothing to say yet
+      date:
+        start:
+          year: 2015
+          month: Aug
+        end:
+          year: 2015
+          month: Sep
+
+
+    - title: Dissonance 2
+      link: none
+      type: Mobile Game
+      description: >
+        Nothing to say yet
+      date:
+        start:
+          year: 2015
+          month: Aug
+        end:
+          year: 2015
+          month: Sep
+
+
+    - title: Kuhvee
+      link: none
+      type: Web App
+      description: >
+        Nothing to say yet
+      date:
+        start:
+          year: 2015
+          month: Aug
+        end:
+          year: 2015
+          month: Sep
+
+
+    - title: Dissonance
+      link: none
+      type: Mobile Game
+      description: >
+        Nothing to say yet
+      date:
+        start:
+          year: 2015
+          month: Aug
+        end:
+          year: 2015
+          month: Sep

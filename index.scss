@@ -36,6 +36,23 @@ body {
   box-sizing: border-box;
 }
 
+.photo{
+  margin-top: -3px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  &-container{
+    border-width: 3px;
+    border-style: solid;
+    width: 350px;
+    height: 350px;
+    background-image: url("../photo.jpg");
+    background-size: 350px;
+    filter: grayscale(1);
+    background-position: center;
+  }
+}
+
 .profile{
   margin-top: 10px;
 }
@@ -73,36 +90,133 @@ body {
   }
 }
 
+.education{
+  margin-top: 25px;
+  margin-bottom: 25px;
+  &-header{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    &-university{
+      font-size: 20px;
+    }
+    &-degree{
+      font-size: 14px;
+    }
+  }
+  &-date{
+    margin-top: 5px;
+    font-size: 16px;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 10px;
+    &-start{
+      margin-right: 4px;
+    }
+    &-end{
+      margin-left: 4px;
+    }
+  }
+  &-note{
+    font-size: 16px;
+  }
+}
+
+.project{
+  margin-top: 25px;
+  margin-bottom: 25px;
+  &-header{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    &-title{
+      font-size: 20px;
+    }
+    &-type{
+      font-size: 14px;
+    }
+  }
+  &-date{
+    margin-top: 5px;
+    font-size: 16px;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 10px;
+    &-start{
+      margin-right: 4px;
+    }
+    &-end{
+      margin-left: 4px;
+    }
+  }
+  &-description{
+    font-size: 16px;
+  }
+}
+
+.course{
+  margin-top: 25px;
+  margin-bottom: 25px;
+  &-header{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    &-title{
+      font-size: 20px;
+    }
+    &-source{
+      font-size: 14px;
+    }
+  }
+  &-date{
+    margin-top: 5px;
+    font-size: 16px;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 10px;
+    &-start{
+      margin-right: 4px;
+    }
+    &-end{
+      margin-left: 4px;
+    }
+  }
+  &-note{
+    font-size: 16px;
+  }
+}
+
 
 .job{
-  .job-title{
+  &-title{
     font-size: 20px;
   }
-  .header{
+  &-header{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
   }
-  .description{
+  &-description{
     font-size: 16px;
   }
-  .type{
+  &-type{
     font-size: 14px;
   }
-  .date{
-    font-size: 18px;
+  &-date{
+    margin-top: 5px;
+    font-size: 16px;
     display: flex;
     flex-flow: row nowrap;
     margin-bottom: 10px;
-    .start{
+    &-start{
       margin-right: 4px;
     }
-    .end{
+    &-end{
       margin-left: 4px;
     }
   }
-  .achievements{
+  &-achievements{
     margin-top: 10px;
     display: flex;
     flex-flow: column nowrap;
@@ -134,7 +248,7 @@ body {
     }
   }
 
-  .team{
+  &-team{
     margin-top: 10px;
     display: flex;
     flex-flow: column nowrap;
@@ -169,8 +283,6 @@ body {
       margin-right: 5px;
     }
   }
-
-
   margin-top: 25px;
   margin-bottom: 25px;
 }
@@ -185,13 +297,19 @@ body {
   background: transparent;
 }
 
-.bold-text{
-  font-weight: bold;
+.text{
+  &-bold{
+    font-weight: bold;
+  }
+}
+
+.hidden{
+  visibility: hidden;
 }
 
 .column-section {
   margin-top: 10px;
-  a{
+  &-link{
     color:black;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -199,10 +317,10 @@ body {
     text-decoration: underline;
     display: block;
   }
-  .title {
+  &-title {
     font-weight: bold;
-    letter-spacing:5px;
-    font-size: 25px;
+    letter-spacing:3px;
+    font-size: 24px;
     text-transform: uppercase;
     &::after{
       content: '';
@@ -213,22 +331,22 @@ body {
       background-color: black;
     }
   }
-  .value{
+  &-value{
     margin-top: 15px;
     margin-bottom: 15px;
     display: flex;
     flex-direction: column;
-    label{
+    &-label{
       display: block;
       font-size: 20px;
     }
     font-size: 20px;
-    .skill{
+    &-skill{
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
       width: 100%;
-      .dot{
+      &-dot{
         margin-top: 2px;
         padding: 2px;
         margin-right: 5px;
@@ -237,7 +355,7 @@ body {
         border-style: solid;
         border-radius: 50%;
         border-width: 2px;
-        .fill{
+        &-fill{
           box-sizing: border-box;
           border-radius: 50%;
           background: black;

@@ -13,4 +13,4 @@ pfreeze:
 
 .PHONY: pdf
 pdf: compose
-	wkhtmltopdf -T 0 -B 0 -L 0 -R 0 --page-width 26cm --page-height 67cm build/index.html cv.pdf
+	wkhtmltopdf -T 0 -B 0 -L 0 -R 0 --page-width 26cm --page-height 80cm build/index.html cv.pdf

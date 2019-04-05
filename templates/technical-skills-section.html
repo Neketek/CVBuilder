@@ -1,0 +1,19 @@
+{% if skills.technical %}
+<div class="column-section">
+  <div class="column-section-title">TECHNICAL SKILLS</div>
+  {% for item in skills.technical %}
+    <div class="column-section-value">
+      <label class="column-section-value-label">{{item.label}}</label>
+      <div class="column-section-value-skill">
+        {% for i in range(0, 10) %}
+          <div class="column-section-value-skill-dot">
+            {% if i < item.value %}
+              <div class="column-section-value-skill-dot-fill"></div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% endif %}

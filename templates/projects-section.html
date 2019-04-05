@@ -1,3 +1,29 @@
 <div class="column-section">
-  <div class="title"> PROJECTS </div>
+  <div class="column-section-title"> PROJECTS </div>
+  {% for item in projects %}
+  <div class="project">
+    <div class="project-header text-bold">
+      <div class="project-header-title">
+        {{item.title}}
+      </div>
+      <div class="project-header-type">
+        {{item.type}}
+      </div>
+    </div>
+    <div class="project-date text-bold">
+      <div class="project-date-start">
+        {{item.date.start.month}}
+        {{item.date.start.year}}
+      </div>
+      -
+      <div class="project-date-end">
+        {{item.date.end.month}}
+        {{item.date.end.year}}
+      </div>
+    </div>
+    <div class="project-description">
+      {{item.description}}
+    </div>
+  </div>
+  {% endfor %}
 </div>

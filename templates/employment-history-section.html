@@ -1,36 +1,36 @@
 <div class="column-section">
-  <div class="title"> EMPLOYMENT HISTORY </div>
+  <div class="column-section-title"> EMPLOYMENT HISTORY </div>
   {% for job in jobs %}
     <div class="job">
-      <div class="header">
-        <div class="job-title bold-text">
+      <div class="job-header">
+        <div class="job-title text-bold">
           {{job.title}}
         </div>
-        <div class="type bold-text">
+        <div class="job-type text-bold">
           {{job.type}}
         </div>
       </div>
-      <div class="date bold-text">
-        <div class="start">
+      <div class="job-date text-bold">
+        <div class="job-date-start">
           {{job.date.start.month}} {{job.date.start.year}}
         </div>
         -
-        <div class="end">
+        <div class="job-date-end">
           {{job.date.end.month}} {{job.date.end.year}}
         </div>
       </div>
-      <div class="description">
+      <div class="job-description">
         {{job.description}}
       </div>
       {% if job.achievements %}
-        <div class="achievements">
-          <div class="achievements-header">
+        <div class="job-achievements">
+          <div class="job-achievements-header">
             Achievements:
           </div>
-          <div class="achievements-container">
+          <div class="job-achievements-container">
             {% for item in job.achievements %}
-              <div class="achievements-item">
-                <div class="achievements-item-dot"></div>
+              <div class="job-achievements-item">
+                <div class="job-achievements-item-dot"></div>
                 {{item}}
               </div>
             {% endfor %}
@@ -38,15 +38,15 @@
         </div>
       {% endif %}
       {% if job.team %}
-        <div class="team">
-          <div class="team-header">
+        <div class="job-team">
+          <div class="job-team-header">
             Team:
           </div>
-          <div class="team-container">
+          <div class="job-team-container">
             {% for member in job.team %}
-              <div class="team-item">
-                <div class="team-number">{{member.number}}</div>
-                <div class="team-profession">{{member.profession}}</div>
+              <div class="job-team-item">
+                <div class="job-team-number">{{member.number}}</div>
+                <div class="job-team-profession">{{member.profession}}</div>
               </div>
             {% endfor %}
           </div>

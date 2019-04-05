@@ -1,3 +1,21 @@
 <div class="column-section">
-  <div class="title"> EDUCATION </div>
+  <div class="column-section-title"> EDUCATION </div>
+  {% for item in education %}
+  <div class="education">
+    <div class="education-header text-bold">
+      <div class="education-header-university">
+        {{item.university}}
+      </div>
+      <div class="education-header-degree">
+        {{item.degree}}
+      </div>
+    </div>
+    <div class="education-date text-bold">
+      <div class="education-date-start">{{item.date.start.year}}</div>
+      -
+      <div class="education-date-end">{{item.date.end.year}}</div>
+    </div>
+    <div class="education-note">{{item.note}}</div>
+  </div>
+  {% endfor %}
 </div>
