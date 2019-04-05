@@ -26,7 +26,7 @@ cv:
         end:
           month: Jan
           year: 2019
-      project: Parrotbot
+      project: React Generic Form
       description: >
         Created simple organizational library which helps in building of
         react based forms.
@@ -53,7 +53,7 @@ cv:
         end:
           month: Aug
           year: 2018
-      project: Parrotbot
+      project: Dissonance 2
       description: >
         Main goals of the project were to train team in game development field, understand
         mobile games market, learn something new, create at least one completed project and
@@ -75,7 +75,7 @@ cv:
         end:
           month: Jan
           year: 2018
-      project: kuhvee.com
+      project: Kuhvee
       description: >
         Was responsible for team and project management, front-end core and all back-end
         development including email and SMS services. Helped client to fix all logical issues
@@ -126,7 +126,7 @@ cv:
         end:
           month: Jan
           year: 2018
-      project: faithhealth.net
+      project: Faithhealth
       description: >
         Fixed completely broken and archaic PHP web app. Hard to express what was achieved
         during this job. In general, prepared project to relatively successful demo and convinced
@@ -142,7 +142,7 @@ cv:
         end:
           month: Jan
           year: 2018
-      project: faithhealth.net
+      project: Viz.ai
       description: >
         Developed neural network project input data methods:
         DICOM image parser for browsers.

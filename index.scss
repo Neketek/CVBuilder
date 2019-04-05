@@ -6,6 +6,20 @@ $leftColumnColor: #E0E0E0;
 $rightColumnColor: #FAFAFA;
 
 
+$fontSizeName: 45px;
+$fontSizeProfession: 30px;
+
+$fontSizeSectionTitle: 24px;
+
+$fontSizeHeaderTitle: 22px;
+$fontSizeHeaderSubTitle: 16px;
+$fontSizeSecondaryTitle: 18px;
+$fontSizeDate: 18px;
+$fontSizeDescription: 18px;
+
+$fontSizeLabel: 20px;
+$fontSizeValue: 20px;
+
 @font-face{
   font-family: 'Roboto';
   src: url(../fonts/Roboto-Regular.ttf) format('truetype');
@@ -54,6 +68,8 @@ body {
 }
 
 .profile{
+  display: flex;
+  font-size: $fontSizeDescription;
   margin-top: 10px;
 }
 
@@ -72,7 +88,7 @@ body {
     border-width: 4px;
     background-color: $backgroundColorSecondary;
     .name{
-      font-size: 45px;
+      font-size: $fontSizeName;
       display: flex;
       flex-flow: row;
       justify-content: center;
@@ -80,7 +96,7 @@ body {
       text-align: center;
     }
     .profession{
-      font-size: 30px;
+      font-size: $fontSizeProfession;
       display: flex;
       flex-flow: row;
       justify-content: center;
@@ -98,15 +114,15 @@ body {
     flex-flow: row nowrap;
     justify-content: space-between;
     &-university{
-      font-size: 20px;
+      font-size: $fontSizeHeaderTitle;
     }
     &-degree{
-      font-size: 14px;
+      font-size: $fontSizeHeaderSubTitle;
     }
   }
   &-date{
     margin-top: 5px;
-    font-size: 16px;
+    font-size: $fontSizeDate;
     display: flex;
     flex-flow: row nowrap;
     margin-bottom: 10px;
@@ -118,7 +134,8 @@ body {
     }
   }
   &-note{
-    font-size: 16px;
+    display: flex;
+    font-size: $fontSizeDescription;
   }
 }
 
@@ -130,15 +147,15 @@ body {
     flex-flow: row nowrap;
     justify-content: space-between;
     &-title{
-      font-size: 20px;
+      font-size: $fontSizeHeaderTitle;
     }
     &-type{
-      font-size: 14px;
+      font-size: $fontSizeHeaderSubTitle;
     }
   }
   &-date{
     margin-top: 5px;
-    font-size: 16px;
+    font-size: $fontSizeDate;
     display: flex;
     flex-flow: row nowrap;
     margin-bottom: 10px;
@@ -150,7 +167,8 @@ body {
     }
   }
   &-description{
-    font-size: 16px;
+    display: flex;
+    font-size: $fontSizeDescription;
   }
 }
 
@@ -162,15 +180,15 @@ body {
     flex-flow: row nowrap;
     justify-content: space-between;
     &-title{
-      font-size: 20px;
+      font-size: $fontSizeHeaderTitle;
     }
     &-source{
-      font-size: 14px;
+      font-size: $fontSizeHeaderSubTitle;
     }
   }
   &-date{
     margin-top: 5px;
-    font-size: 16px;
+    font-size: $fontSizeDate;
     display: flex;
     flex-flow: row nowrap;
     margin-bottom: 10px;
@@ -182,30 +200,40 @@ body {
     }
   }
   &-note{
-    font-size: 16px;
+    display: flex;
+    font-size: $fontSizeDescription;
   }
 }
 
 
 .job{
-  &-title{
-    font-size: 20px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  &-project{
+    display: flex;
+    font-size: $fontSizeSecondaryTitle;
   }
   &-header{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
+    &-title{
+      font-size: $fontSizeHeaderTitle;
+    }
+    &-type{
+      font-size: $fontSizeHeaderSubTitle;
+    }
   }
+
   &-description{
-    font-size: 16px;
+    display: flex;
+    font-size: $fontSizeDescription;
   }
-  &-type{
-    font-size: 14px;
-  }
+
   &-date{
     margin-top: 5px;
-    font-size: 16px;
+    font-size: $fontSizeDate;
     display: flex;
     flex-flow: row nowrap;
     margin-bottom: 10px;
@@ -221,7 +249,7 @@ body {
     display: flex;
     flex-flow: column nowrap;
     &-header{
-      font-size: 15px;
+      font-size: $fontSizeDescription;
       font-weight: bold;
     }
     &-container{
@@ -229,6 +257,7 @@ body {
       padding-left: 5px;
     }
     &-item{
+      font-size: $fontSizeDescription;
       display: flex;
       flex-flow: row nowrap;
       justify-content: flex-start;
@@ -253,7 +282,7 @@ body {
     display: flex;
     flex-flow: column nowrap;
     &-header{
-      font-size: 15px;
+      font-size: $fontSizeDescription;
       font-weight: bold;
     }
     &-container{
@@ -268,7 +297,8 @@ body {
       align-items: baseline;
     }
     &-profession{
-      font-size: 18px;
+      display: flex;
+      font-size: $fontSizeDescription;
     }
     &-number{
       display: flex;
@@ -276,15 +306,14 @@ body {
       justify-content: center;
       box-sizing: border-box;
       font-weight: bold;
-      font-size: 15px;
+      font-size: $fontSizeDescription;
       border-style: solid;
       border-width: 2px;
       padding: 2px;
       margin-right: 5px;
     }
   }
-  margin-top: 25px;
-  margin-bottom: 25px;
+
 }
 
 
@@ -293,7 +322,6 @@ body {
   flex-grow: 1;
   flex-direction: row;
   flex-wrap: nowrap;
-  font-size: 20px;
   background: transparent;
 }
 
@@ -313,14 +341,14 @@ body {
     color:black;
     margin-top: 15px;
     margin-bottom: 15px;
-    font-size: 20px;
+    font-size: $fontSizeLabel;
     text-decoration: underline;
     display: block;
   }
   &-title {
     font-weight: bold;
     letter-spacing:3px;
-    font-size: 24px;
+    font-size: $fontSizeSectionTitle;
     text-transform: uppercase;
     &::after{
       content: '';
@@ -338,9 +366,9 @@ body {
     flex-direction: column;
     &-label{
       display: block;
-      font-size: 20px;
+      font-size: $fontSizeLabel;
     }
-    font-size: 20px;
+    font-size: $fontSizeValue;
     &-skill{
       display: flex;
       flex-direction: row;

@@ -2,13 +2,16 @@
   <div class="column-section-title"> EMPLOYMENT HISTORY </div>
   {% for job in jobs %}
     <div class="job">
-      <div class="job-header">
-        <div class="job-title text-bold">
+      <div class="job-header text-bold">
+        <div class="job-header-title">
           {{job.title}}
         </div>
-        <div class="job-type text-bold">
+        <div class="job-header-type">
           {{job.type}}
         </div>
+      </div>
+      <div class="job-project text-bold">
+        {{job.project}}
       </div>
       <div class="job-date text-bold">
         <div class="job-date-start">
