@@ -11,11 +11,11 @@ $fontSizeProfession: 30px;
 
 $fontSizeSectionTitle: 24px;
 
-$fontSizeHeaderTitle: 22px;
-$fontSizeHeaderSubTitle: 16px;
-$fontSizeSecondaryTitle: 18px;
-$fontSizeDate: 18px;
-$fontSizeDescription: 18px;
+$fontSizeHeaderTitle: 24px;
+$fontSizeHeaderSubTitle: 18px;
+$fontSizeSecondaryTitle: 20px;
+$fontSizeDate: 20px;
+$fontSizeDescription: 20px;
 
 $fontSizeLabel: 20px;
 $fontSizeValue: 20px;
@@ -106,20 +106,7 @@ body {
   }
 }
 
-.education{
-  margin-top: 25px;
-  margin-bottom: 25px;
-  &-header{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    &-university{
-      font-size: $fontSizeHeaderTitle;
-    }
-    &-degree{
-      font-size: $fontSizeHeaderSubTitle;
-    }
-  }
+@mixin date(){
   &-date{
     margin-top: 5px;
     font-size: $fontSizeDate;
@@ -133,15 +120,9 @@ body {
       margin-left: 4px;
     }
   }
-  &-note{
-    display: flex;
-    font-size: $fontSizeDescription;
-  }
 }
 
-.project{
-  margin-top: 25px;
-  margin-bottom: 25px;
+@mixin header(){
   &-header{
     display: flex;
     flex-flow: row nowrap;
@@ -149,101 +130,66 @@ body {
     &-title{
       font-size: $fontSizeHeaderTitle;
     }
-    &-type{
+    &-subtitle{
       font-size: $fontSizeHeaderSubTitle;
     }
   }
-  &-date{
-    margin-top: 5px;
-    font-size: $fontSizeDate;
+}
+
+@mixin secondary-title(){
+  &-secondary-title{
     display: flex;
-    flex-flow: row nowrap;
-    margin-bottom: 10px;
-    &-start{
-      margin-right: 4px;
-    }
-    &-end{
-      margin-left: 4px;
-    }
+    font-size: $fontSizeSecondaryTitle;
   }
+}
+
+
+@mixin description(){
   &-description{
     display: flex;
     font-size: $fontSizeDescription;
   }
 }
 
-.course{
+
+@mixin right-column-item-margin(){
   margin-top: 25px;
   margin-bottom: 25px;
-  &-header{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    &-title{
-      font-size: $fontSizeHeaderTitle;
-    }
-    &-source{
-      font-size: $fontSizeHeaderSubTitle;
-    }
-  }
-  &-date{
-    margin-top: 5px;
-    font-size: $fontSizeDate;
-    display: flex;
-    flex-flow: row nowrap;
-    margin-bottom: 10px;
-    &-start{
-      margin-right: 4px;
-    }
-    &-end{
-      margin-left: 4px;
-    }
-  }
-  &-note{
-    display: flex;
-    font-size: $fontSizeDescription;
-  }
+}
+
+.education{
+  @include right-column-item-margin();
+  @include header();
+  @include secondary-title();
+  @include date();
+  @include description();
+}
+
+.project{
+  @include right-column-item-margin();
+  @include header();
+  @include secondary-title();
+  @include date();
+  @include description();
+}
+
+.course{
+  @include right-column-item-margin();
+  @include header();
+  @include secondary-title();
+  @include date();
+  @include description();
 }
 
 
 .job{
-  margin-top: 25px;
-  margin-bottom: 25px;
-  &-project{
-    display: flex;
-    font-size: $fontSizeSecondaryTitle;
-  }
-  &-header{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    &-title{
-      font-size: $fontSizeHeaderTitle;
-    }
-    &-type{
-      font-size: $fontSizeHeaderSubTitle;
-    }
-  }
 
-  &-description{
-    display: flex;
-    font-size: $fontSizeDescription;
-  }
+  @include right-column-item-margin();
+  @include header();
+  @include secondary-title();
+  @include date();
+  @include description();
 
-  &-date{
-    margin-top: 5px;
-    font-size: $fontSizeDate;
-    display: flex;
-    flex-flow: row nowrap;
-    margin-bottom: 10px;
-    &-start{
-      margin-right: 4px;
-    }
-    &-end{
-      margin-left: 4px;
-    }
-  }
   &-achievements{
     margin-top: 10px;
     display: flex;
@@ -317,12 +263,26 @@ body {
 }
 
 
-.columns {
-  display: flex;
-  flex-grow: 1;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  background: transparent;
+.column{
+  &-container{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background: transparent;
+  }
+  &-left {
+    padding: 0 10px 0 10px;
+    box-sizing: border-box;
+    width: $leftColumnSize;
+    background: $leftColumnColor;
+    flex-shrink: 0;
+  }
+  &-right{
+    flex-grow: 1;
+    padding: 0 10px 0 10px;
+    background: $rightColumnColor;
+  }
 }
 
 .text{
@@ -391,21 +351,6 @@ body {
           height: 100%;
         }
       }
-
     }
   }
-}
-
-.column-left {
-  padding: 0 10px 0 10px;
-  box-sizing: border-box;
-  width: $leftColumnSize;
-  background: $leftColumnColor;
-  flex-shrink: 0;
-}
-
-.column-right{
-  flex-grow: 1;
-  padding: 0 10px 0 10px;
-  background: $rightColumnColor;
 }

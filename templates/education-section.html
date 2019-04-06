@@ -3,10 +3,10 @@
   {% for item in education %}
   <div class="education">
     <div class="education-header text-bold">
-      <div class="education-header-university">
+      <div class="education-header-title">
         {{item.university}}
       </div>
-      <div class="education-header-degree">
+      <div class="education-header-subtitle">
         {{item.degree}}
       </div>
     </div>
@@ -15,7 +15,7 @@
       -
       <div class="education-date-end">{{item.date.end.year}}</div>
     </div>
-    <div class="education-note">{{item.note}}</div>
+    <div class="education-description">{{item.note}}</div>
   </div>
   {% endfor %}
 </div>
