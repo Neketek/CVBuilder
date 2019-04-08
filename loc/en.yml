@@ -1,9 +1,27 @@
 loc:
   info:
-    title: info
+    title: Info
     address: Address
     dateplaceofbith: Date/Place of birth
     nationality: Nationality
   languages:
     title: Languages
-  
+  profile:
+    title: Profile
+  skills:
+    title: Skills
+    technical:
+      title: Technical Skills
+  links:
+    title: Links
+  jobs:
+    title: Employment History
+    item:
+      achievements: Achievements
+      team: Team
+  education:
+    title: Education
+  courses:
+    title: Courses
+  projects:
+    title: Projects

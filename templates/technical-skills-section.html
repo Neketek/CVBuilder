@@ -1,6 +1,6 @@
 {% if skills.technical %}
 <div class="column-section">
-  <div class="column-section-title">TECHNICAL SKILLS</div>
+  <div class="column-section-title">{{loc.skills.technical.title}}</div>
   {% for item in skills.technical %}
     <div class="column-section-value">
       <label class="column-section-value-label">{{item.label}}</label>

@@ -1,5 +1,5 @@
 <div class="column-section">
-  <div class="column-section-title"> EMPLOYMENT HISTORY </div>
+  <div class="column-section-title"> {{loc.jobs.title}} </div>
   {% for job in jobs %}
     <div class="job">
       <div class="job-header text-bold">
@@ -28,7 +28,7 @@
       {% if job.achievements %}
         <div class="job-achievements">
           <div class="job-achievements-header">
-            Achievements:
+            {{loc.jobs.item.achievements}}:
           </div>
           <div class="job-achievements-container">
             {% for item in job.achievements %}
@@ -43,7 +43,7 @@
       {% if job.team %}
         <div class="job-team">
           <div class="job-team-header">
-            Team:
+            {{loc.jobs.item.team}}:
           </div>
           <div class="job-team-container">
             {% for member in job.team %}
