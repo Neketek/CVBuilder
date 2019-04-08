@@ -3,12 +3,20 @@ cv:
   name:
     first: Nikita
     last: Balakin
-  profession: Web Developer
+  profession: Software Developer
   profile: >
-    Experienced responsible software developer with management skills. Fast
-    learner. Prefer to work with servers and databases, but have no problems in other
-    fields except highly scientific. Prefer difficult startups over routine corporate
-    projects.
+    I'm an experienced and responsible software developer with management and leadership skills, fast learner.
+    Preferable field of work is servers or databases. The secondary area of expertise is front-end development.
+    Prefer challenging tasks over calm routine work.  I spent five years of life learning different aspects of math, programming, logic.
+    Started a software developer carrier as a freelancer and was quite successful in it.
+    I'm looking for long term jobs opportunities cause it helps to utilize my skills better, but have nothing against 3-6 months projects.
+  info:
+    - label: Address
+      value: Kyiv, Ukraine
+    - label: Date/Place of birth
+      value: 1994-12-29/Ukraine
+    - label: Nationality
+      value: Ukrainian
   languages:
     - label: English
       value: Good Command
@@ -28,8 +36,11 @@ cv:
           year: 2019
       project: React Generic Form
       description: >
-        Created simple organizational library which helps in building of
-        react based forms.
+        I just wanted to finally do something with my vision
+        of the react form creation based on experience which I got developing Kuhvee front end DRY utils.
+      achievements:
+        - Created DRY React util for form data organization.
+        - Created a test app to demonstrate package abilities.
 
     - title: Chat Bot Developer
       type: Freelance
@@ -42,8 +53,16 @@ cv:
           year: 2019
       project: Parrotbot
       description: >
-        Self hosted lightweight Slack scheduled user reports manager.
-        Private order from my friends employer.
+        Private order from my friend's boss.
+        My first experience with chatbots.
+        I was asked to create a lightweight bot which will manage daily team reports aka standup meetings.
+        The additional requirement was not to use a remote database to keep things simple,
+        which was a limiting factor because SQLite has minimal functionality compared to standard relational databases.
+      achievements:
+        - Created Flask like Slack RTM wrapper
+        - Created a relatively simple database schema which expands usage of the bot beyond simple standup meetings.
+        - "Created AWS deployment script which requires nothing more than launched EC2 instance created using project's AMI."
+        - Created bot technical concept which can be expanded to become good subscription based Slack bot service.
     - title: Game Developer
       type: Personal
       date:
@@ -55,12 +74,13 @@ cv:
           year: 2018
       project: Dissonance 2
       description: >
-        Main goals of the project were to train team in game development field, understand
-        mobile games market, learn something new, create at least one completed project and
-        optionally make some profit from it.
+        My first game project with a serious approach to development and project management.
+        The game is relatively small and not complex, just a learning project for the most part.
       achievements:
-        - Something
-        - Something Else
+        - Designed game mechanics
+        - Designed game interface
+        - Implemented game play portion of the game
+        - Managed team work
       team:
         - profession: Game Developer
           number: 2
@@ -77,37 +97,26 @@ cv:
           year: 2018
       project: Kuhvee
       description: >
-        Was responsible for team and project management, front-end core and all back-end
-        development including email and SMS services. Helped client to fix all logical issues
-        which were present in original project, technically analyze tasks and goals, prioritize
-        them. As a result project has solid core functionality with few UX design issues, which
-        can be fixed rather quickly. All of this didn't prevent client from greatly changing his
-        requirements often enough to prolong the development of beta version for almost a
-        year.
-        Was forced to quit because of contract organizational disputes with client who firstly
-        confirmed contract reorganization at certain date, but then started acting like that talk
-        never happened. Did my best to resolve the dispute, but client for some unknown
-        reason didn't want to switch contract to another with the same hourly rate, but with
-        cleaner description. Whole team quit after me, because of such client's behavior.
-        Project is operational, but seems abandoned due to overdue SSL certificate.
-
-        Was responsible for team and project management, front-end core and all back-end
-        development including email and SMS services. Helped client to fix all logical issues
-        which were present in original project, technically analyze tasks and goals, prioritize
-        them. As a result project has solid core functionality with few UX design issues, which
-        can be fixed rather quickly. All of this didn't prevent client from greatly changing his
-        requirements often enough to prolong the development of beta version for almost a
-        year.
-        Was forced to quit because of contract organizational disputes with client who firstly
-        confirmed contract reorganization at certain date, but then started acting like that talk
-        never happened. Did my best to resolve the dispute, but client for some unknown
-        reason didn't want to switch contract to another with the same hourly rate, but with
-        cleaner description. Whole team quit after me, because of such client's behavior.
-        Project is operational, but seems abandoned due to overdue SSL certificate.
+        I was playing the role of the "multitool" developer.
+        It was a hard experience because of the small team size and client's frequent modifications to the general development plan.
+        Unfortunately, the project didn't succeed businesswise.
+        The idea of the project is pretty simple.
+        It's volunteers management service designed around tasks which automatically
+        search for volunteers who are the best fit for the job defined in the task description.
       achievements:
-        - cleaner description. Whole team quit after me, because of such client's behavior.
-          Project is operational, but seems abandoned due to overdue SSL certificate.
-        - Something Else
+        - Designed web app front-end core using React&Redux as a base.
+        - Created DRY forms and wizards creation tools.
+        - Created the UX concept of the dashboard which simplifies the learning curve of the end user.
+        - Designed back-end core using Python, Flask, MySQL, SQLAlchemy.
+        - Implemented general back-end functionality.
+        - Designed a relatively complex SQL database schema.
+        - Created and implemented several algorithms for automatic task invitations.
+        - Created volunteer organization/groups statistics functionality. Volunteers age, gender,  volunteering preferences, activities, etc.
+        - At the last stages of the development, I was responsible for the development of substantial UX improvement of the tasks interface, which unfortunately not implemented.
+        - Integrated Mixpanel analytics into the web app.
+        - Was responsible for translating client requirements to the programming tasks.
+        - Helped client to analyze his requirements technically.
+        - Effectively managed the work of the small team.
       team:
         - profession: Team Leader/Project Manager
           number: 1
@@ -128,11 +137,20 @@ cv:
           year: 2018
       project: Faithhealth
       description: >
-        Fixed completely broken and archaic PHP web app. Hard to express what was achieved
-        during this job. In general, prepared project to relatively successful demo and convinced
-        client that it needs to be remade.
-        Project is down, because of awful code quality and impossibility of further
-        improvements.
+        I was responsible for fixing and analyzing of an old and completely broken PHP web app.
+        In general, the project consisted of the bugs and simple mistakes like opening new session each time database query performed.
+        After I helped to reanimate it to show it on the demo, the project got scrapped due to a very unprofessional database schema design as well as many other significant problems.
+        I convinced the client to remake it using modern approaches and therefore got assigned as Lead Developer of the Kuhvee.
+      team:
+        - profession: Front End Developer
+          number: 1
+        - profession: Full Stack Web Developer
+          number: 2
+      achievements:
+        - Analyzed the state of the old PHP project.
+        - Fixed some substantial almost impossible to fix bugs.
+        - Prepared the project for a demo.
+        - Saved the world from further development of that app.
     - title: Full Stack Web Developer
       type: Freelance
       date:
@@ -144,17 +162,12 @@ cv:
           year: 2018
       project: Viz.ai
       description: >
-        Developed neural network project input data methods:
-        DICOM image parser for browsers.
-        Web app which splits video to frames with frame selector front-end.
-        Performed various minor front-end tasks.
-  info:
-    - label: Address
-      value: Kyiv, Ukraine
-    - label: Date/Place of birth
-      value: 1994-12-29/Ukraine
-    - label: Nationality
-      value: Ukrainian
+        I was responsible for the development of the user input data methods for
+        neural network project designed to help in the detection of tumors using various medical imagery.
+      achievements:
+        - Created DICOM image parser/viewer for browsers.
+        - Created video to frames converter web app.
+        - Performed various minor front-end tasks.
   links:
     - label: Telegram
       value: ""
@@ -238,6 +251,7 @@ cv:
   education:
 
     - university: National University of Kyiv-Mohyla Academy
+      specialization: Faculty of Computer Sciences, Applied Mathematics
       degree: Bachelor
       date:
         start:
@@ -248,6 +262,7 @@ cv:
         Diploma: B16 №052528
 
     - university: National University of Kyiv-Mohyla Academy
+      specialization: Faculty of Computer Sciences, Applied Mathematics
       degree: Master
       date:
         start:
@@ -260,8 +275,6 @@ cv:
   courses:
     - source: Coursera
       title: Machine Learning by Standford University
-      note: >
-        This was a part of my university study
       date:
         start:
           year: 2015
@@ -272,72 +285,133 @@ cv:
 
   projects:
 
+    - title: CV Builder
+      link: none
+      type: Linux / Browser Tool
+      description: >
+        Simple to use Linux tool for CV creation.
+        I was bothered by the inability to get long page PDF for CV because in case of a web page
+        to PDF conversion browsers often ruin good looking HTML/CSS template by breaking page several times.
+      date:
+        start:
+          year: 2019
+          month: Apr
+        end:
+          year: 2019
+          month: Apr
+
 
     - title: React Generic Form
       link: none
       type: NPM package
       description: >
-        Nothing to say yet
+        React util for generic form creation.
+        Its primary purpose is a creation of a unified form data
+        structure with an ability to nest forms which in theory simplifies form creation
+        because each generic form can be easily split into independent forms and further used in other forms with no problems.
+        Additionally, it provides a convenient way to add validation rules and fields focus management based on the form state instead of callbacks.
       date:
         start:
-          year: 2015
-          month: Aug
+          year: 2019
+          month: Mar
         end:
-          year: 2015
-          month: Sep
+          year: 2019
+          month: Mar
 
 
     - title: Parrotbot
       link: none
       type: Slack Chat Bot
       description: >
-        Nothing to say yet
+        Super lightweight Slack bot.
+        It serves as a team daily reports(aka standup meetings) manager.
+        It also supports custom surveys with a customizable schedule.
+        The project contains AWS EC2 deployment scripts which allow to deploy it with just a couple of commands.
       date:
         start:
-          year: 2015
-          month: Aug
+          year: 2018
+          month: Dec
         end:
-          year: 2015
-          month: Sep
+          year: 2019
+          month: Jan
 
 
     - title: Dissonance 2
       link: none
       type: Mobile Game
       description: >
-        Nothing to say yet
+        My first experience using Unity 3d for real.
+        The game itself is a mobile arcade.
+        A couple of my comrades and I decided to "touch" mobile games market to better understand its current state.
+        As a result, we found that it will be tough and risky to dedicate our lives solely to indie game dev.
       date:
         start:
-          year: 2015
-          month: Aug
+          year: 2018
+          month: Jul
         end:
-          year: 2015
-          month: Sep
+          year: 2018
+          month: Aug
 
 
     - title: Kuhvee
       link: none
       type: Web App
       description: >
-        Nothing to say yet
+        My magnum opus which was not destined to become successful, unfortunately.
+        The project is a volunteers management service.
+        It designed around the concept of tasks which automatically search and invite volunteers who fit task actions description.
+        Useful but straightforward service. Unfortunately, it didn't succeed businesswise.
+        Probably because the client was unable to focus on the main features of the product and was frequently changing his mind about product business logic.
+        Eventually, such a style of decision making led to a financial shortage and client's attempts to trick the whole team into waiting an unknown amount of time until he gets new investments.
       date:
         start:
-          year: 2015
+          year: 2016
+          month: Sep
+        end:
+          year: 2018
+          month: Jan
+
+
+    - title: GridOnJs
+      link: none
+      type: NPM package
+      description: >
+        The simple project without particular usefulness to humanity.
+        I made it for fun and to fill up my Upwork profile projects list.
+      date:
+        start:
+          year: 2016
           month: Aug
         end:
-          year: 2015
-          month: Sep
+          year: 2016
+          month: Aug
+
+    - title: RevHand
+      link: none
+      type: Desktop App
+      description: >
+        The project is simple films or books reviews storing application. I made it for my friend.
+      date:
+        start:
+          year: 2016
+          month: May
+        end:
+          year: 2016
+          month: May
 
 
     - title: Dissonance
       link: none
       type: Mobile Game
       description: >
-        Nothing to say yet
+        The initial mostly conceptual variant of Dissonance game.
+        It wasn't looking pretty cause I made it alone without any help of a graphic designer.
+        Also, for reasons unknown even for me, I decided to use libgdx.
+        I removed it from a store in 2018 cause I decided to remake it in a proper way.
       date:
         start:
           year: 2015
-          month: Aug
+          month: Jul
         end:
           year: 2015
-          month: Sep
+          month: Aug

@@ -1,0 +1,9 @@
+loc:
+  info:
+    title: info
+    address: Address
+    dateplaceofbith: Date/Place of birth
+    nationality: Nationality
+  languages:
+    title: Languages
+  
