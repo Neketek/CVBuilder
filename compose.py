@@ -11,7 +11,7 @@ arg_parser = ArgumentParser()
 
 arg_parser.add_argument(
     dest="data",
-    help="Data file name"
+    help="CV data file name"
 )
 arg_parser.add_argument(
     "--width",
@@ -40,13 +40,13 @@ args = arg_parser.parse_args()
 DIR_PATH = os.path.dirname(os.path.abspath(__file__))
 TEMPLATES_FOLDER = os.path.join(DIR_PATH, "templates", args.template)
 STYLES_FILE = os.path.join(TEMPLATES_FOLDER, "styles.scss")
-OPTIONS_CACHE_FILE = os.path.join(DIR_PATH, "options.cache.yml")
-HTML_IN_FILE = os.path.join(DIR_PATH, "build/index.html")
-CSS_IN_FILE = os.path.join(DIR_PATH, "build/index.css")
+HTML_IN_FILE = os.path.join(TEMPLATES_FOLDER, "build/index.html")
+CSS_IN_FILE = os.path.join(TEMPLATES_FOLDER, "build/index.css")
+LOC_DIR = os.path.join(TEMPLATES_FOLDER, "loc")
 PDF_OUT_FILE = os.path.join(DIR_PATH, "cv.pdf")
 DATA_DIR = os.path.join(DIR_PATH, "data")
-LOC_DIR = os.path.join(DIR_PATH, "loc")
 PHOTO_DIR = os.path.join(DIR_PATH, "data/photo")
+
 DEFAULT_LOC = "en.yml"
 
 data_filename = "{}.yml".format(args.data)
@@ -83,7 +83,9 @@ env = Environment(
 
 main = env.get_template("body.html")
 
-with open("build/index.html", "w") as f:
+print(env.list_templates())
+
+with open(HTML_IN_FILE, "w") as f:
     f.write(main.render(**data))
 
 subprocess.call(["npx", "node-sass", STYLES_FILE, CSS_IN_FILE])
