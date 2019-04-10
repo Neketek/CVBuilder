@@ -9,7 +9,8 @@ loc:
   profile:
     title: Profile
   skills:
-    title: Skills
+    general:
+      title: Skills
     technical:
       title: Technical Skills
   links:

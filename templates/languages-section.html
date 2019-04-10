@@ -1,3 +1,4 @@
+{% if languages %}
 <div class="column-section">
   <div class="column-section-title"> {{loc.languages.title}} </div>
   {% for item in languages %}
@@ -7,3 +8,4 @@
     </div>
   {% endfor %}
 </div>
+{% endif %}

@@ -1,0 +1,28 @@
+loc:
+  info:
+    title: Информация
+    address: Адрес
+    dateplaceofbith: Дата/Место рождения
+    nationality: Национальность
+  languages:
+    title: Языки
+  profile:
+    title: Профиль
+  skills:
+    general:
+      title: Навыки
+    technical:
+      title: Технические Навыки
+  links:
+    title: Ссылки
+  jobs:
+    title: История трудоустройства
+    item:
+      achievements: Достижения
+      team: Команда
+  education:
+    title: Образование
+  courses:
+    title: Курсы
+  projects:
+    title: Проекты

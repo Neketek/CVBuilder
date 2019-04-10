@@ -1,3 +1,4 @@
+{% if courses %}
 <div class="column-section">
   <div class="column-section-title"> {{loc.courses.title}} </div>
   {% for item in courses %}
@@ -25,3 +26,4 @@
     </div>
   {% endfor %}
 </div>
+{% endif %}
