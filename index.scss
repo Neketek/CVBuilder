@@ -127,6 +127,7 @@ body {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    align-items: baseline;
     &-title{
       font-size: $fontSizeHeaderTitle;
     }
@@ -171,6 +172,13 @@ body {
   @include secondary-title();
   @include date();
   @include description();
+  &-link{
+    display: flex;
+    font-weight: bold;
+    font-size: $fontSizeDescription;
+    text-decoration: underline;
+    color:black;
+  }
 }
 
 .course{

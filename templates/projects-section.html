@@ -24,6 +24,9 @@
     <div class="project-description">
       {{item.description}}
     </div>
+    {% if item.link %}
+      <a href="{{item.link.value}}" class="project-link">{{item.link.title}}</a>
+    {% endif %}
   </div>
   {% endfor %}
 </div>

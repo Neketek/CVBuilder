@@ -287,7 +287,9 @@ cv:
   projects:
 
     - title: CV Builder
-      link: https://github.com/Neketek/CVBuilder
+      link:
+        title: Github
+        value: https://github.com/Neketek/CVBuilder
       type: Linux / Browser Tool
       description: >
         Simple to use Linux tool for CV creation.
@@ -303,7 +305,9 @@ cv:
 
 
     - title: React Generic Form
-      link: https://github.com/Neketek/react-generic-form
+      link:
+        title: Github
+        value: https://github.com/Neketek/react-generic-form
       type: NPM package
       description: >
         React util for generic form creation.
@@ -321,7 +325,9 @@ cv:
 
 
     - title: Parrotbot
-      link: https://github.com/Neketek/parrotbot
+      link:
+        title: Github
+        value: https://github.com/Neketek/parrotbot
       type: Slack Chat Bot
       description: >
         Super lightweight Slack bot.
@@ -338,7 +344,9 @@ cv:
 
 
     - title: Dissonance 2
-      link: https://github.com/arachnid42/Dissonance-2
+      link:
+        title: Github
+        value: https://github.com/arachnid42/Dissonance-2
       type: Mobile Game
       description: >
         My first experience using Unity 3d for real.
@@ -355,7 +363,9 @@ cv:
 
 
     - title: Kuhvee
-      link: http://web.archive.org/web/20190121225019/https://kuhvee.com/
+      link:
+        title: Web Archive
+        value: http://web.archive.org/web/20190121225019/https://kuhvee.com/
       type: Web App
       description: >
         My magnum opus which was not destined to become successful, unfortunately.
@@ -374,7 +384,9 @@ cv:
 
 
     - title: GridOnJs
-      link: https://github.com/Neketek/gridonjs
+      link:
+        title: Github
+        value: https://github.com/Neketek/gridonjs
       type: NPM package
       description: >
         The simple project without particular usefulness to humanity.
@@ -388,7 +400,9 @@ cv:
           month: Aug
 
     - title: RevHand
-      link: https://github.com/Neketek/revHand
+      link:
+        title: Github
+        value: https://github.com/Neketek/revHand
       type: Desktop App
       description: >
         The project is simple films or books reviews storing application. I made it for my friend.
@@ -402,7 +416,9 @@ cv:
 
 
     - title: Dissonance
-      link: https://github.com/Neketek/Dissonance
+      link:
+        title: Github
+        value: https://github.com/Neketek/Dissonance
       type: Mobile Game
       description: >
         The initial mostly conceptual variant of Dissonance game.
