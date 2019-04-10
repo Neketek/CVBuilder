@@ -1,0 +1,11 @@
+{% if contacts %}
+<div class="column-section">
+  <div class="column-section-title"> {{loc.contacts.title}} </div>
+  {% for item in contacts %}
+    <div class="column-section-value">
+      <div class="column-section-value-label text-bold">{{item.label}}</div>
+      {{item.value}}
+    </div>
+  {% endfor %}
+</div>
+{% endif %}

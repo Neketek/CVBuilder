@@ -58,12 +58,11 @@ body {
   &-container{
     border-width: 3px;
     border-style: solid;
-    width: 350px;
-    height: 350px;
-    background-image: url("../photo.jpg");
-    background-size: 350px;
-    filter: grayscale(1);
-    background-position: center;
+    width: 350px !important;
+    height: 350px !important;
+    background-size: 350px !important;
+    filter: grayscale(1) !important;
+    background-position: center !important;
   }
 }
 

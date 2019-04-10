@@ -4,6 +4,8 @@ loc:
     address: Адрес
     dateplaceofbith: Дата/Место рождения
     nationality: Национальность
+  contacts:
+    title: Контакты
   languages:
     title: Языки
   profile:

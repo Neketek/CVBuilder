@@ -4,6 +4,8 @@ loc:
     address: Address
     dateplaceofbith: Date/Place of birth
     nationality: Nationality
+  contacts:
+    title: Contacts
   languages:
     title: Languages
   profile:
