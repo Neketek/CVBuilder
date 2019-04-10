@@ -83,8 +83,6 @@ env = Environment(
 
 main = env.get_template("body.html")
 
-print(env.list_templates())
-
 with open(HTML_IN_FILE, "w") as f:
     f.write(main.render(**data))
 
