@@ -1,0 +1,6 @@
+.git
+Dockerfile
+venv
+node_modules
+.gitignore
+*.pdf

@@ -1,6 +1,10 @@
 .PHONY: all
 all:
 
-.PHONY: pfreeze
-pfreeze:
-	pip freeze -l > requirements.txt
+.PHONY: drun
+drun:
+	docker run -it -v $(shell pwd):/cv cv:prod bash
+
+.PHONY: dbuild
+dbuild:
+	docker build --rm -t cv:prod .

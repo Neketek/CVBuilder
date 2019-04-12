@@ -1,11 +1,11 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
+
 from jinja2 import Environment, select_autoescape, FileSystemLoader
 from argparse import ArgumentParser
 import os
 import yaml
 import pdfkit
 import subprocess
-
 
 arg_parser = ArgumentParser()
 
@@ -51,16 +51,16 @@ DEFAULT_LOC = "en.yml"
 
 data_filename = "{}.yml".format(args.data)
 
-with open(os.path.join(DATA_DIR, data_filename), "r") as datastream:
+with open(os.path.join(DATA_DIR, data_filename), "rb") as datastream:
     data = yaml.safe_load(datastream)['cv']
 
 locale_filename = "{}.yml".format(data.get("loc", "en"))
 
 try:
-    with open(os.path.join(LOC_DIR, locale_filename), "r") as loc:
+    with open(os.path.join(LOC_DIR, locale_filename), "rb") as loc:
         data['loc'] = yaml.safe_load(loc, )['loc']
 except FileNotFoundError:
-    with open(os.path.join(LOC_DIR, DEFAULT_LOC)) as loc:
+    with open(os.path.join(LOC_DIR, DEFAULT_LOC), "rb") as loc:
         data['loc'] = yaml.safe_load(loc)['loc']
 
 
@@ -83,7 +83,7 @@ env = Environment(
 
 main = env.get_template("body.html")
 
-with open(HTML_IN_FILE, "w") as f:
+with open(HTML_IN_FILE, "w", encoding="utf-8") as f:
     f.write(main.render(**data))
 
 subprocess.call(["npx", "node-sass", STYLES_FILE, CSS_IN_FILE])
