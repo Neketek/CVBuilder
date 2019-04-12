@@ -38,12 +38,13 @@ args = arg_parser.parse_args()
 
 
 DIR_PATH = os.path.dirname(os.path.abspath(__file__))
+OUT_PATH = os.path.join(DIR_PATH, "out")
 TEMPLATES_FOLDER = os.path.join(DIR_PATH, "templates", args.template)
 STYLES_FILE = os.path.join(TEMPLATES_FOLDER, "styles.scss")
 HTML_IN_FILE = os.path.join(TEMPLATES_FOLDER, "build/index.html")
 CSS_IN_FILE = os.path.join(TEMPLATES_FOLDER, "build/index.css")
 LOC_DIR = os.path.join(TEMPLATES_FOLDER, "loc")
-PDF_OUT_FILE = os.path.join(DIR_PATH, "cv.pdf")
+PDF_OUT_FILE = os.path.join(OUT_PATH, "cv.pdf")
 DATA_DIR = os.path.join(DIR_PATH, "data")
 PHOTO_DIR = os.path.join(DIR_PATH, "data/photo")
 

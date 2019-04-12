@@ -7,6 +7,7 @@ run:
 	docker run -it \
 	-v $(shell pwd)/data:/cv/data \
 	-v $(shell pwd)/templates:/cv/templates \
+	-v $(shell pwd)/out/:/cv/out \
 	cv:prod bash
 
 
