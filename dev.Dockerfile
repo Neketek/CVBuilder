@@ -11,4 +11,4 @@ COPY . /cv/
 
 VOLUME ["/cv"]
 
-ENTRYPOINT ["sh", "provision.dev.entry.sh"]
+ENTRYPOINT ["sh", "entry.dev.sh"]
