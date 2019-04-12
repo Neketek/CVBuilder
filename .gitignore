@@ -2,5 +2,6 @@
 /venv
 templates/*/build
 data/*.yml
-data/photo/*.*
+data/photo/*
+!data/photo/readme.md
 *.pdf
