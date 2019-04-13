@@ -4,7 +4,7 @@ all:
 
 .PHONY: run
 run:
-	docker run -it \
+	docker run -it --rm \
 	-v $(shell pwd)/data:/cv/data \
 	-v $(shell pwd)/templates:/cv/templates \
 	-v $(shell pwd)/out/:/cv/out \
@@ -18,7 +18,7 @@ build:
 
 .PHONY: devrun
 devrun:
-	docker run -it \
+	docker run -it --rm \
 	-v $(shell pwd):/cv \
 	cv:dev bash
 
