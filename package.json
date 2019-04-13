@@ -15,6 +15,6 @@
     "postcss-cli": "^6.1.2"
   },
   "browserslist": [
-    "last 4 version"
+    "last 5 version"
   ]
 }
