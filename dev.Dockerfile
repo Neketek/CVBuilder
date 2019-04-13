@@ -3,12 +3,12 @@ FROM ubuntu:18.04
 WORKDIR cv
 COPY requirements.txt requirements.txt
 COPY package*.json ./
-COPY provision.* ./
+COPY provision/dev ./provision/dev
 
-RUN sh provision.dev.sh
+RUN sh provision/dev/install.sh
 
 COPY . /cv/
 
 VOLUME ["/cv"]
 
-ENTRYPOINT ["sh", "entry.dev.sh"]
+ENTRYPOINT ["sh", "provision/dev/entry.sh"]
