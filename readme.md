@@ -35,7 +35,7 @@ You can contribute by any means. The preferable way is the creation of new CV te
 4. Create ``dataparser.py``. This file should contain function which will receive a loaded data  and return it back after all required modifications are done.
 5. Create ``data-example.yml``. This file should contain an example of data for your CV template.
 6. ???
-7. PROFIT!!! Now you can start the creation of your beautiful CV template. And if you feel generous and opensourcy feel free to share a template with a community of free folks.
+7. PROFIT!!! Now you can start the creation of your beautiful CV template. And if you feel generous and opensourcy share a template with a community.
 
 #### data-example.yml
 ```yaml
