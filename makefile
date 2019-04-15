@@ -8,20 +8,19 @@ run:
 	-v $(shell pwd)/data:/cv/data \
 	-v $(shell pwd)/templates:/cv/templates \
 	-v $(shell pwd)/out/:/cv/out \
-	cv:prod bash
+	cv:prod
 
 
 .PHONY: build
 build:
-	docker build --rm -t cv:prod .
+	docker build -f prod.Dockerfile --rm -t cv:prod .
 
 
 .PHONY: devrun
 devrun:
 	docker run -it --rm \
 	-v $(shell pwd):/cv \
-	cv:dev bash
-
+	cv:dev
 
 .PHONY: devbuild
 devbuild:

@@ -19,7 +19,7 @@ arg_parser.add_argument(
     "--width",
     dest="width",
     help="Page width in cm",
-    default=21,
+    default=28,
     type=float
 )
 arg_parser.add_argument(
@@ -34,6 +34,38 @@ arg_parser.add_argument(
     dest="template",
     help="Template to use",
     default="default"
+)
+
+arg_parser.add_argument(
+    "-T",
+    dest="mTop",
+    help="Margin top",
+    default="0",
+    type=str
+)
+
+arg_parser.add_argument(
+    "-B",
+    dest="mBottom",
+    help="Margin bottom",
+    default="0",
+    type=str
+)
+
+arg_parser.add_argument(
+    "-L",
+    dest="mLeft",
+    help="Margin left",
+    default="0",
+    type=str
+)
+
+arg_parser.add_argument(
+    "-R",
+    dest="mRight",
+    help="Margin right",
+    default="0",
+    type=str
 )
 
 arg_parser.add_argument(
@@ -105,10 +137,10 @@ subprocess.call(["npx", "postcss", CSS_IN_FILE, "-u", "autoprefixer", "-r"])
 options = {
     'page-width': "{}cm".format(args.width),
     'page-height': "{}cm".format(args.height),
-    'margin-top': '0',
-    'margin-right': '0',
-    'margin-bottom': '0',
-    'margin-left': '0',
+    'margin-top': args.mTop,
+    'margin-right': args.mRight,
+    'margin-bottom': args.mBottom,
+    'margin-left': args.mLeft,
     'encoding': "UTF-8",
 }
 

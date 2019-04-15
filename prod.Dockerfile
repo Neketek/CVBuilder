@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM alpine:3.9
 
 WORKDIR cv
 COPY requirements.txt requirements.txt

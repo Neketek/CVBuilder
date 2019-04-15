@@ -1,2 +1,2 @@
-echo "PATH='$(pwd):$PATH'" >> ~/.bashrc
-bash
+export PATH="$(pwd):$PATH"
+sh
