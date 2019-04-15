@@ -31,6 +31,31 @@ You can contribute by any means. The preferable way is the creation of new CV te
 ## Create Template (HOWTO):
 1. Create a new directory under ``cv/templates`` directory. In the end path to it should look like ``cv/templates/<template_name>`` where template_name is a name you chose for your template.
 2. Inside template directory create two files ``index.html`` and ``index.scss``. These two will be SCSS and HTML templates entries which composer will use to create HTML/CSS template of your CV.
-3. Create ``data-example.yml``. This file should contain an example of data for your CV template.
-4. ???
-5. PROFIT!!! Now you can start the creation of your beautiful CV template. And if you feel generous and opensourcy feel free to share a template with a community of free folks. 
+3. Create ``loc/en.yml`` file. This file should contain default localization.
+4. Create ``dataparser.py``. This file should contain function which will receive a loaded data  and return it back after all required modifications are done.
+5. Create ``data-example.yml``. This file should contain an example of data for your CV template.
+6. ???
+7. PROFIT!!! Now you can start the creation of your beautiful CV template. And if you feel generous and opensourcy feel free to share a template with a community of free folks.
+
+#### data-example.yml
+```yaml
+# special key which will be replaced by link to your photo
+photo: yourphotofilename.png
+# special key which will be replaced by corresponding localization data
+loc: en
+# do not use special keys for CV data
+```
+
+
+#### dataparser.py
+```python
+def parse(data:dict) -> dict:
+  """
+  Here you can do anything with CV data.
+  Args:
+    data: CV data in dict format
+  Returns:
+    Modified CV data.
+  """
+  return data
+```

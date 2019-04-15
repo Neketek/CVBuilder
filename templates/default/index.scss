@@ -121,9 +121,12 @@ body {
     border-style: solid;
     width: 350px !important;
     height: 350px !important;
-    background-size: 350px !important;
+    background-size: 350px auto !important;
+    filter: grayscale(100%) !important;
     filter: grayscale(1) !important;
+    filter: gray;
     background-position: center !important;
+    background-repeat: no-repeat !important;
   }
 }
 

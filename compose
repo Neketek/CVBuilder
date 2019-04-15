@@ -36,6 +36,13 @@ arg_parser.add_argument(
     default="default"
 )
 
+arg_parser.add_argument(
+    "--grayscale",
+    help="Convert to grayscale",
+    dest="grayscale",
+    action="store_true"
+)
+
 args = arg_parser.parse_args()
 
 
@@ -49,7 +56,8 @@ CSS_IN_FILE = os.path.join(TEMPLATES_FOLDER, "build/index.css")
 LOC_DIR = os.path.join(TEMPLATES_FOLDER, "loc")
 PDF_OUT_FILE = os.path.join(OUT_PATH, "cv.pdf")
 DATA_DIR = os.path.join(DIR_PATH, "data")
-PHOTO_DIR = os.path.join(DIR_PATH, "data/photo")
+# using path relative to template/<name>/build/index.html
+PHOTO_DIR = "../../../data/photo"
 
 DEFAULT_LOC = "en.yml"
 
@@ -103,6 +111,9 @@ options = {
     'margin-left': '0',
     'encoding': "UTF-8",
 }
+
+if args.grayscale:
+    options['grayscale'] = ''
 
 pdfkit.from_file(HTML_IN_FILE, PDF_OUT_FILE, options=options)
 
