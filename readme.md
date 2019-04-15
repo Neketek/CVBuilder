@@ -15,13 +15,22 @@ This Linux tool is designed to provide an ability to create long single page CVs
 4. Run ``make build`` and wait until the image is built.
 
 ## Usage:
-1. Put your cv data into the ``cv/data`` directory
+1. Put your CV data into the ``cv/data`` directory. You can find an example of the data structure for a particular template in ``cv/templates/<template_name>/data-example.yml`` file.
 2. Put your photo if you need it into ``cv/data/photo`` directory
 3. Run ``make run``
-4. Run ``compose <filename without extension> --width <width in cm> --height <height in cm> --template <template folder name>``
+4. Run ``compose <filename without extension> --width <width in cm> --height <height in cm> --template <template folder name>``.
 5. Your CV will be stored in ``cv/out`` directory
 6. ???
 7. PROFIT!!!
 
 ## Contribution:
 You can contribute by any means. The preferable way is the creation of new CV templates. Take the default template as an example.
+
+
+
+## Create Template (HOWTO):
+1. Create a new directory under ``cv/templates`` directory. In the end path to it should look like ``cv/templates/<template_name>`` where template_name is a name you chose for your template.
+2. Inside template directory create two files ``index.html`` and ``index.scss``. These two will be SCSS and HTML templates entries which composer will use to create HTML/CSS template of your CV.
+3. Create ``data-example.yml``. This file should contain an example of data for your CV template.
+4. ???
+5. PROFIT!!! Now you can start the creation of your beautiful CV template. And if you feel generous and opensourcy feel free to share a template with a community of free folks. 

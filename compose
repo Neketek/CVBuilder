@@ -6,6 +6,8 @@ import os
 import yaml
 import pdfkit
 import subprocess
+from importlib import util as importutil
+
 
 arg_parser = ArgumentParser()
 
@@ -40,7 +42,8 @@ args = arg_parser.parse_args()
 DIR_PATH = os.path.dirname(os.path.abspath(__file__))
 OUT_PATH = os.path.join(DIR_PATH, "out")
 TEMPLATES_FOLDER = os.path.join(DIR_PATH, "templates", args.template)
-STYLES_FILE = os.path.join(TEMPLATES_FOLDER, "styles.scss")
+DATAPARSER_MODULE = os.path.join(TEMPLATES_FOLDER, "dataparser.py")
+STYLES_FILE = os.path.join(TEMPLATES_FOLDER, "index.scss")
 HTML_IN_FILE = os.path.join(TEMPLATES_FOLDER, "build/index.html")
 CSS_IN_FILE = os.path.join(TEMPLATES_FOLDER, "build/index.css")
 LOC_DIR = os.path.join(TEMPLATES_FOLDER, "loc")
@@ -53,36 +56,37 @@ DEFAULT_LOC = "en.yml"
 data_filename = "{}.yml".format(args.data)
 
 with open(os.path.join(DATA_DIR, data_filename), "rb") as datastream:
-    data = yaml.safe_load(datastream)['cv']
+    data = yaml.safe_load(datastream)
+
+# importing custom dataparser module
+dataparser_spec = importutil.spec_from_file_location(
+    ".dataparser",
+    DATAPARSER_MODULE
+)
+dataparser = importutil.module_from_spec(dataparser_spec)
+dataparser_spec.loader.exec_module(dataparser)
+
+# parsing data
+data = dataparser.parse(data)
+
+if data.get('photo'):
+    data['photo'] = os.path.join(PHOTO_DIR, data['photo'])
 
 locale_filename = "{}.yml".format(data.get("loc", "en"))
 
 try:
     with open(os.path.join(LOC_DIR, locale_filename), "rb") as loc:
-        data['loc'] = yaml.safe_load(loc, )['loc']
+        data['loc'] = yaml.safe_load(loc)
 except FileNotFoundError:
     with open(os.path.join(LOC_DIR, DEFAULT_LOC), "rb") as loc:
-        data['loc'] = yaml.safe_load(loc)['loc']
-
-
-def sort_skills(item):
-    return "{}{}".format(item['value'], item["label"])
-
-
-if data.get('photo'):
-    data['photo'] = os.path.join(PHOTO_DIR, data['photo'])
-
-if data.get("sort") and data.get("sort").get("skills"):
-    data["skills"]["general"].sort(key=sort_skills, reverse=True)
-    data["skills"]["technical"].sort(key=sort_skills, reverse=True)
-
+        data['loc'] = yaml.safe_load(loc)
 
 env = Environment(
     loader=FileSystemLoader(TEMPLATES_FOLDER),
-    autoescape=select_autoescape(["html"])
+    autoescape=select_autoescape(["html", "scss"])
 )
 
-main = env.get_template("body.html")
+main = env.get_template("index.html")
 
 with open(HTML_IN_FILE, "w", encoding="utf-8") as f:
     f.write(main.render(**data))

@@ -5,3 +5,4 @@ data/*.yml
 data/photo/*
 !data/photo/readme.md
 *.pdf
+**/__pycache__

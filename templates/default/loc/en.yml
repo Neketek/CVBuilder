@@ -1,30 +1,29 @@
-loc:
-  info:
-    title: Info
-    address: Address
-    dateplaceofbith: Date/Place of birth
-    nationality: Nationality
-  contacts:
-    title: Contacts
-  languages:
-    title: Languages
-  profile:
-    title: Profile
-  skills:
-    general:
-      title: Skills
-    technical:
-      title: Technical Skills
-  links:
-    title: Links
-  jobs:
-    title: Employment History
-    item:
-      achievements: Achievements
-      team: Team
-  education:
-    title: Education
-  courses:
-    title: Courses
-  projects:
-    title: Projects
+info:
+  title: Info
+  address: Address
+  dateplaceofbith: Date/Place of birth
+  nationality: Nationality
+contacts:
+  title: Contacts
+languages:
+  title: Languages
+profile:
+  title: Profile
+skills:
+  general:
+    title: Skills
+  technical:
+    title: Technical Skills
+links:
+  title: Links
+jobs:
+  title: Employment History
+  item:
+    achievements: Achievements
+    team: Team
+education:
+  title: Education
+courses:
+  title: Courses
+projects:
+  title: Projects
